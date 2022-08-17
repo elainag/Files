@@ -28,7 +28,7 @@ public class FilesController {
 
     @PostMapping(value = "/files")
     public ResponseEntity<Files> createFile(@RequestBody Files files){
-        filesRepository.save(files)
+        filesRepository.save(files);
         return new ResponseEntity<>(files, HttpStatus.CREATED);
     }
 }
